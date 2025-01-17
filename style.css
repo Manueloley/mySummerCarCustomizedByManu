@@ -1,0 +1,186 @@
+/* Corpo della pagina */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a); /* Sfondo futuristico */
+    color: #00ffc3;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: backgroundGlow 5s infinite alternate;
+}
+
+@keyframes backgroundGlow {
+    0% {
+        background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    }
+    50% {
+        background: linear-gradient(135deg, #0d0d0d, #333333);
+    }
+    100% {
+        background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    }
+}
+
+/* Titoli */
+h1, h2, h3 {
+    color: #00bfff;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #008080, 0 0 30px #004d4d;
+    margin: 20px 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #00bfff, 0 0 20px #008080, 0 0 30px #004d4d;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ffc3, 0 0 40px #00bfff, 0 0 60px #00e6e6;
+    }
+}
+
+/* Testo */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #d1f0e3;
+    margin: 0 0 15px;
+}
+
+/* Contenitori */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Sfondo traslucido */
+    border: 2px solid #00ffc3;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 195, 0.5), 0 0 40px rgba(0, 191, 255, 0.3);
+    backdrop-filter: blur(10px); /* Effetto vetro */
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Pulsanti */
+button, .btn {
+    background: linear-gradient(90deg, #ff00ff, #00ffc3);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffc3;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(90deg, #00ffc3, #ff00ff);
+    box-shadow: 0 0 30px #ff00ff, 0 0 40px #00ffc3;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    transform: skewX(-30deg);
+    transition: left 0.5s;
+}
+
+button:hover::before {
+    left: 150%;
+}
+
+/* Immagini */
+img {
+    max-width: 100%;
+    border: 3px solid #00ffc3;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00bfff, 0 0 30px #00ffc3;
+    margin: 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #00ffc3, 0 0 40px #ff00ff;
+}
+
+/* Sezione speciale */
+#about-game {
+    margin-top: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #001f33, #003d66);
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00bfff, 0 0 30px #00ffc3;
+    animation: float 3s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Testo neon */
+.neon-text {
+    color: #00ffc3;
+    text-shadow: 0 0 10px #00ffc3, 0 0 20px #00bfff, 0 0 40px #00ff80;
+    font-size: 24px;
+    animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Effetto alert */
+.warning {
+    background: linear-gradient(90deg, #ff0000, #ff5500);
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff5500;
+    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff5500;
+}
+
+/* Animazioni e effetti per icone interattive */
+.interactive {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border: 2px solid #ff00ff;
+    border-radius: 8px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive:hover {
+    background: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffc3, 0 0 40px #ff00ff;
+    transform: scale(1.1);
+}
